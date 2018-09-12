@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATCStoryCollectionViewCell" customModule="ListingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="166"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WsO-0q-5Jt">
+                        <rect key="frame" x="41" y="0.0" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="3O2-7P-1cz"/>
+                            <constraint firstAttribute="height" constant="70" id="lQ5-Vo-uYu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-g3-LUJ">
+                        <rect key="frame" x="55" y="74" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="WsO-0q-5Jt" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="3GT-Fg-Us1"/>
+                <constraint firstItem="ycB-g3-LUJ" firstAttribute="top" secondItem="WsO-0q-5Jt" secondAttribute="bottom" constant="4" id="7if-Xi-jQf"/>
+                <constraint firstItem="WsO-0q-5Jt" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="J0n-JW-O6I"/>
+                <constraint firstItem="ycB-g3-LUJ" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="PLm-fQ-lCN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="153" height="166"/>
+            <connections>
+                <outlet property="storyImageView" destination="WsO-0q-5Jt" id="huA-Qq-jKe"/>
+                <outlet property="storyLabel" destination="ycB-g3-LUJ" id="LIx-re-oHY"/>
+            </connections>
+            <point key="canvasLocation" x="85.5" y="112"/>
+        </collectionViewCell>
+    </objects>
+</document>

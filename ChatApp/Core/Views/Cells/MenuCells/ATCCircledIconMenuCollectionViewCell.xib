@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATCCircledIconMenuCollectionViewCell" customModule="DashboardApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="73"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="202" height="73"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9N-VE-zNv" userLabel="Image Container View">
+                        <rect key="frame" x="40" y="21.5" width="30" height="30"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gd5-mx-Hdb" userLabel="Menu Image View">
+                                <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="79j-7g-ZXb"/>
+                                    <constraint firstAttribute="height" constant="15" id="rg2-0p-uOI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gd5-mx-Hdb" firstAttribute="centerX" secondItem="Q9N-VE-zNv" secondAttribute="centerX" id="DsG-Pa-7mZ"/>
+                            <constraint firstItem="gd5-mx-Hdb" firstAttribute="centerY" secondItem="Q9N-VE-zNv" secondAttribute="centerY" id="Dux-AZ-9Op"/>
+                            <constraint firstAttribute="width" constant="30" id="Ijo-gy-2KD"/>
+                            <constraint firstAttribute="height" constant="30" id="WDs-0b-8zd"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpR-V1-BXx" userLabel="Menu Label">
+                        <rect key="frame" x="90" y="26" width="92" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Q9N-VE-zNv" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="26j-wB-DdI"/>
+                <constraint firstItem="Q9N-VE-zNv" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="40" id="Abs-yf-eUj"/>
+                <constraint firstItem="mpR-V1-BXx" firstAttribute="leading" secondItem="Q9N-VE-zNv" secondAttribute="trailing" constant="20" id="DC3-wu-2Ci"/>
+                <constraint firstItem="mpR-V1-BXx" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="DY9-RG-4Ew"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="mpR-V1-BXx" secondAttribute="trailing" constant="20" id="GfY-XC-HH9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="202" height="73"/>
+            <connections>
+                <outlet property="imageContainerView" destination="Q9N-VE-zNv" id="LFF-vi-rmm"/>
+                <outlet property="menuImageView" destination="gd5-mx-Hdb" id="5sQ-aG-VJb"/>
+                <outlet property="menuLabel" destination="mpR-V1-BXx" id="gev-Ya-HIn"/>
+            </connections>
+            <point key="canvasLocation" x="-42" y="82.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

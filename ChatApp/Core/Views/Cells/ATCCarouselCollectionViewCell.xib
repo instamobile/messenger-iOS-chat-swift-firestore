@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATCCarouselCollectionViewCell" customModule="ListingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="295" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="295" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="net-7e-HJm" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="190"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqT-RG-9Ai" userLabel="Carousel Container View">
+                                <rect key="frame" x="0.0" y="45.5" width="295" height="144.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="q16-hh-boi">
+                                <rect key="frame" x="128" y="128" width="39" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPO-er-tjk" userLabel="Title Label">
+                                <rect key="frame" x="20" y="15" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PPO-er-tjk" firstAttribute="leading" secondItem="net-7e-HJm" secondAttribute="leading" constant="20" id="3mE-L6-mYL"/>
+                            <constraint firstItem="SqT-RG-9Ai" firstAttribute="top" secondItem="PPO-er-tjk" secondAttribute="bottom" constant="10" id="Cha-FB-vLT"/>
+                            <constraint firstAttribute="bottom" secondItem="q16-hh-boi" secondAttribute="bottom" constant="25" id="EWn-Uk-8Iw"/>
+                            <constraint firstItem="SqT-RG-9Ai" firstAttribute="top" secondItem="net-7e-HJm" secondAttribute="top" priority="250" id="Oxa-dj-Hrk"/>
+                            <constraint firstItem="q16-hh-boi" firstAttribute="centerX" secondItem="net-7e-HJm" secondAttribute="centerX" id="WIB-Pv-m4Y"/>
+                            <constraint firstItem="SqT-RG-9Ai" firstAttribute="width" secondItem="net-7e-HJm" secondAttribute="width" id="czY-cA-ZHl"/>
+                            <constraint firstItem="PPO-er-tjk" firstAttribute="top" secondItem="net-7e-HJm" secondAttribute="top" constant="15" id="iaS-Px-mcY"/>
+                            <constraint firstAttribute="bottom" secondItem="SqT-RG-9Ai" secondAttribute="bottom" id="shW-pZ-iH7"/>
+                            <constraint firstItem="SqT-RG-9Ai" firstAttribute="centerX" secondItem="net-7e-HJm" secondAttribute="centerX" id="yLO-jD-cnL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="net-7e-HJm" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="19M-bD-l00"/>
+                <constraint firstItem="net-7e-HJm" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="DtB-xX-Vx0"/>
+                <constraint firstItem="net-7e-HJm" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="mBo-BG-Q3W"/>
+                <constraint firstItem="net-7e-HJm" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="yxd-Nf-HKS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="295" height="190"/>
+            <connections>
+                <outlet property="carouselContainerView" destination="SqT-RG-9Ai" id="DWx-AF-mHQ"/>
+                <outlet property="carouselTitleLabel" destination="PPO-er-tjk" id="lVl-5L-lkN"/>
+                <outlet property="pageControl" destination="q16-hh-boi" id="dzg-oN-CHZ"/>
+            </connections>
+            <point key="canvasLocation" x="76.5" y="94"/>
+        </collectionViewCell>
+    </objects>
+</document>

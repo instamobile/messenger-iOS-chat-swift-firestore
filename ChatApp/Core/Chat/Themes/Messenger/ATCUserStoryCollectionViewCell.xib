@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATCUserStoryCollectionViewCell" customModule="ChatApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="136" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="136" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-G4-pBA" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="136" height="134"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="073-nC-afL" userLabel="Image Container View">
+                                <rect key="frame" x="53" y="13" width="50" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buj-d7-9aa">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="buj-d7-9aa" firstAttribute="height" secondItem="073-nC-afL" secondAttribute="height" id="deV-aT-C3E"/>
+                                    <constraint firstAttribute="height" constant="50" id="lff-4V-OzD"/>
+                                    <constraint firstItem="buj-d7-9aa" firstAttribute="width" secondItem="073-nC-afL" secondAttribute="width" id="lyQ-ex-92Y"/>
+                                    <constraint firstItem="buj-d7-9aa" firstAttribute="centerX" secondItem="073-nC-afL" secondAttribute="centerX" id="nFS-Cw-ZUC"/>
+                                    <constraint firstAttribute="width" constant="50" id="w8l-4P-IWg"/>
+                                    <constraint firstItem="buj-d7-9aa" firstAttribute="centerY" secondItem="073-nC-afL" secondAttribute="centerY" id="yEO-cT-BUU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWb-v3-HRz" userLabel="Online Status View">
+                                <rect key="frame" x="85" y="48" width="15" height="15"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="2KF-P2-E1F"/>
+                                    <constraint firstAttribute="width" constant="15" id="Ry6-B9-o8G"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-gq-C8U" userLabel="Story Title Label">
+                                <rect key="frame" x="57" y="71" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dWY-gq-C8U" firstAttribute="top" secondItem="073-nC-afL" secondAttribute="bottom" constant="8" id="61W-tR-Xrw"/>
+                            <constraint firstItem="nWb-v3-HRz" firstAttribute="top" secondItem="073-nC-afL" secondAttribute="bottom" constant="-15" id="Lw9-A5-BeW"/>
+                            <constraint firstItem="073-nC-afL" firstAttribute="centerX" secondItem="Sfe-G4-pBA" secondAttribute="centerX" constant="10" id="Uik-Ee-Ii8"/>
+                            <constraint firstItem="073-nC-afL" firstAttribute="top" secondItem="Sfe-G4-pBA" secondAttribute="top" constant="13" id="XeM-gy-4Ze"/>
+                            <constraint firstItem="nWb-v3-HRz" firstAttribute="leading" secondItem="073-nC-afL" secondAttribute="trailing" constant="-18" id="w2B-NQ-YBy"/>
+                            <constraint firstItem="dWY-gq-C8U" firstAttribute="centerX" secondItem="Sfe-G4-pBA" secondAttribute="centerX" constant="10" id="zdH-9l-zGG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Sfe-G4-pBA" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="KxM-nw-8rO"/>
+                <constraint firstItem="Sfe-G4-pBA" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="chM-yA-LgI"/>
+                <constraint firstItem="Sfe-G4-pBA" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="naU-tq-vW2"/>
+                <constraint firstItem="Sfe-G4-pBA" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="ueY-8l-DwT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="136" height="134"/>
+            <connections>
+                <outlet property="containerView" destination="Sfe-G4-pBA" id="iyd-0U-A14"/>
+                <outlet property="imageContainerView" destination="073-nC-afL" id="dFN-j2-mYV"/>
+                <outlet property="onlineStatusView" destination="nWb-v3-HRz" id="g6n-vV-leT"/>
+                <outlet property="storyImageView" destination="buj-d7-9aa" id="6bl-bv-0MY"/>
+                <outlet property="storyTitleLabel" destination="dWY-gq-C8U" id="y2S-1n-yy7"/>
+            </connections>
+            <point key="canvasLocation" x="-134" y="96"/>
+        </collectionViewCell>
+    </objects>
+</document>
