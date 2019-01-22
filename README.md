@@ -32,7 +32,7 @@ pod install
 
 4. Use the following code to instantiate a chat view controller
 
-```
+```swift
 let uiConfig = ATCChatUIConfiguration(primaryColor: UIColor(hexString: "#0084ff"),
                                       secondaryColor: UIColor(hexString: "#f0f0f0"),
                                       inputTextViewBgColor: UIColor(hexString: "#f4f4f6"),
