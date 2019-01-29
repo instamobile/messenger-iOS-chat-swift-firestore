@@ -13,6 +13,7 @@
 		171120652128F45A008C7FBE /* ChatUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171120642128F45A008C7FBE /* ChatUIConfiguration.swift */; };
 		171120672128F4EA008C7FBE /* ChatHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171120662128F4EA008C7FBE /* ChatHostViewController.swift */; };
 		1711206D2128FBAC008C7FBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1711206C2128FBAC008C7FBE /* GoogleService-Info.plist */; };
+		178ECB3F21F7F85600E58A80 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ECB3E21F7F85500E58A80 /* Typealiases.swift */; };
 		17A2B86A2148C1AC0071D01F /* ATCChatChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B6B32148C1A90071D01F /* ATCChatChannel.swift */; };
 		17A2B86B2148C1AC0071D01F /* ATChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B6B42148C1A90071D01F /* ATChatMessage.swift */; };
 		17A2B86C2148C1AC0071D01F /* ATCChatUserStoryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B6B62148C1A90071D01F /* ATCChatUserStoryAdapter.swift */; };
@@ -98,7 +99,6 @@
 		17A2B9922148C1AE0071D01F /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B8192148C1AB0071D01F /* Constraint.swift */; };
 		17A2B9932148C1AE0071D01F /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B81A2148C1AB0071D01F /* Debugging.swift */; };
 		17A2B9942148C1AE0071D01F /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B81B2148C1AB0071D01F /* ConstraintRelatableTarget.swift */; };
-		17A2B9952148C1AE0071D01F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17A2B81C2148C1AB0071D01F /* Info.plist */; };
 		17A2B9962148C1AE0071D01F /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B81D2148C1AB0071D01F /* LayoutConstraint.swift */; };
 		17A2B9972148C1AE0071D01F /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B81E2148C1AB0071D01F /* ConstraintLayoutGuide+Extensions.swift */; };
 		17A2B9982148C1AE0071D01F /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B81F2148C1AB0071D01F /* ConstraintLayoutSupportDSL.swift */; };
@@ -117,6 +117,7 @@
 		171120642128F45A008C7FBE /* ChatUIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUIConfiguration.swift; sourceTree = "<group>"; };
 		171120662128F4EA008C7FBE /* ChatHostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHostViewController.swift; sourceTree = "<group>"; };
 		1711206C2128FBAC008C7FBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		178ECB3E21F7F85500E58A80 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		17A2B6B32148C1A90071D01F /* ATCChatChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCChatChannel.swift; sourceTree = "<group>"; };
 		17A2B6B42148C1A90071D01F /* ATChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATChatMessage.swift; sourceTree = "<group>"; };
 		17A2B6B62148C1A90071D01F /* ATCChatUserStoryAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCChatUserStoryAdapter.swift; sourceTree = "<group>"; };
@@ -203,7 +204,6 @@
 		17A2B8192148C1AB0071D01F /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		17A2B81A2148C1AB0071D01F /* Debugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
 		17A2B81B2148C1AB0071D01F /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		17A2B81C2148C1AB0071D01F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A2B81D2148C1AB0071D01F /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		17A2B81E2148C1AB0071D01F /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		17A2B81F2148C1AB0071D01F /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
@@ -489,6 +489,7 @@
 		17A2B7FD2148C1AB0071D01F /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
+				178ECB3E21F7F85500E58A80 /* Typealiases.swift */,
 				17A2B7FE2148C1AB0071D01F /* ConstraintMultiplierTarget.swift */,
 				17A2B7FF2148C1AB0071D01F /* LayoutConstraintItem.swift */,
 				17A2B8002148C1AB0071D01F /* ConstraintDescription.swift */,
@@ -519,7 +520,6 @@
 				17A2B8192148C1AB0071D01F /* Constraint.swift */,
 				17A2B81A2148C1AB0071D01F /* Debugging.swift */,
 				17A2B81B2148C1AB0071D01F /* ConstraintRelatableTarget.swift */,
-				17A2B81C2148C1AB0071D01F /* Info.plist */,
 				17A2B81D2148C1AB0071D01F /* LayoutConstraint.swift */,
 				17A2B81E2148C1AB0071D01F /* ConstraintLayoutGuide+Extensions.swift */,
 				17A2B81F2148C1AB0071D01F /* ConstraintLayoutSupportDSL.swift */,
@@ -557,6 +557,7 @@
 				17111D3D2128F29C008C7FBE /* Frameworks */,
 				17111D3E2128F29C008C7FBE /* Resources */,
 				994045FF338E9BA81F802AF2 /* [CP] Embed Pods Frameworks */,
+				6E7ED98515D262B056EDC8EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -619,13 +620,30 @@
 				17A2B9192148C1AD0071D01F /* ATCStoryCollectionViewCell.xib in Resources */,
 				17A2B8D32148C1AD0071D01F /* ATCMenuHeaderTableViewCell.xib in Resources */,
 				17A2B9342148C1AD0071D01F /* ATCCarouselCollectionViewCell.xib in Resources */,
-				17A2B9952148C1AE0071D01F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6E7ED98515D262B056EDC8EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		994045FF338E9BA81F802AF2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,12 +663,11 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -668,12 +685,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -751,6 +767,7 @@
 				17A2B9962148C1AE0071D01F /* LayoutConstraint.swift in Sources */,
 				17A2B8712148C1AC0071D01F /* ATCChatThreadsViewController.swift in Sources */,
 				17A2B9582148C1AE0071D01F /* ATCUIGenericConfigurationProtocol.swift in Sources */,
+				178ECB3F21F7F85600E58A80 /* Typealiases.swift in Sources */,
 				17A2B98F2148C1AE0071D01F /* ConstraintLayoutGuideDSL.swift in Sources */,
 				17A2B9782148C1AE0071D01F /* ConstraintMultiplierTarget.swift in Sources */,
 				17A2B9322148C1AD0071D01F /* ATCCarouselCollectionViewCell.swift in Sources */,
@@ -935,7 +952,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.instamobile.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -954,7 +971,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.instamobile.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
