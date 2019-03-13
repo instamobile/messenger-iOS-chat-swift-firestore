@@ -148,7 +148,7 @@ public class ATCHostViewController: UIViewController {
             drawerController = ATCDrawerController(rootViewController: navigationRootController!, menuController: menuViewController!)
             navigationRootController?.drawerDelegate = drawerController
             if let drawerController = drawerController {
-                self.addChildViewController(drawerController)
+                self.addChild(drawerController)
                 navigationRootController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
                 navigationRootController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
             }

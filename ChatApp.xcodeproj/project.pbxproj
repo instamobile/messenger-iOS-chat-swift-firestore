@@ -12,7 +12,6 @@
 		17111D4E2128F29E008C7FBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17111D4C2128F29E008C7FBE /* LaunchScreen.storyboard */; };
 		171120652128F45A008C7FBE /* ChatUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171120642128F45A008C7FBE /* ChatUIConfiguration.swift */; };
 		171120672128F4EA008C7FBE /* ChatHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171120662128F4EA008C7FBE /* ChatHostViewController.swift */; };
-		1711206D2128FBAC008C7FBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1711206C2128FBAC008C7FBE /* GoogleService-Info.plist */; };
 		178ECB3F21F7F85600E58A80 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ECB3E21F7F85500E58A80 /* Typealiases.swift */; };
 		17A2B86A2148C1AC0071D01F /* ATCChatChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B6B32148C1A90071D01F /* ATCChatChannel.swift */; };
 		17A2B86B2148C1AC0071D01F /* ATChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B6B42148C1A90071D01F /* ATChatMessage.swift */; };
@@ -116,7 +115,6 @@
 		17111D4F2128F29E008C7FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171120642128F45A008C7FBE /* ChatUIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUIConfiguration.swift; sourceTree = "<group>"; };
 		171120662128F4EA008C7FBE /* ChatHostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHostViewController.swift; sourceTree = "<group>"; };
-		1711206C2128FBAC008C7FBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		178ECB3E21F7F85500E58A80 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		17A2B6B32148C1A90071D01F /* ATCChatChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCChatChannel.swift; sourceTree = "<group>"; };
 		17A2B6B42148C1A90071D01F /* ATChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATChatMessage.swift; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				17A2B6642148C1A90071D01F /* Core */,
-				1711206C2128FBAC008C7FBE /* GoogleService-Info.plist */,
 				17111D432128F29C008C7FBE /* AppDelegate.swift */,
 				17111D4A2128F29E008C7FBE /* Assets.xcassets */,
 				17111D4C2128F29E008C7FBE /* LaunchScreen.storyboard */,
@@ -609,7 +606,6 @@
 				17A2B8722148C1AC0071D01F /* ATCThreadCollectionViewCell.xib in Resources */,
 				17A2B9152148C1AD0071D01F /* ATCViewControllerContainerCollectionViewCell.xib in Resources */,
 				17A2B9292148C1AD0071D01F /* ATCMessengerUserCollectionViewCell.xib in Resources */,
-				1711206D2128FBAC008C7FBE /* GoogleService-Info.plist in Resources */,
 				17A2B9242148C1AD0071D01F /* ATCCircledIconMenuCollectionViewCell.xib in Resources */,
 				17111D4E2128F29E008C7FBE /* LaunchScreen.storyboard in Resources */,
 				17111D4B2128F29E008C7FBE /* Assets.xcassets in Resources */,
@@ -632,7 +628,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -641,7 +637,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		994045FF338E9BA81F802AF2 /* [CP] Embed Pods Frameworks */ = {
@@ -650,7 +646,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
@@ -695,7 +691,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9EDF6937E14E4642BBAC31F /* [CP] Check Pods Manifest.lock */ = {
@@ -944,13 +940,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JSQ6T9Y6J4;
+				DEVELOPMENT_TEAM = 6F9773F85D;
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.instamobile.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giganom.quickchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -963,13 +959,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JSQ6T9Y6J4;
+				DEVELOPMENT_TEAM = 6F9773F85D;
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.instamobile.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giganom.quickchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

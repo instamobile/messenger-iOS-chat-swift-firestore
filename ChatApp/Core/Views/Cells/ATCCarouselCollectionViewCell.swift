@@ -80,7 +80,7 @@ class ATCCarouselCollectionViewCell: UICollectionViewCell, ATCGenericCollectionV
         viewController.view.frame = carouselContainerView.bounds
         carouselContainerView.addSubview(viewController.view)
         self.setNeedsLayout()
-        viewModel.parentViewController?.addChildViewController(viewModel.viewController)
+        viewModel.parentViewController?.addChild(viewModel.viewController)
     }
 
     func genericScrollView(_ scrollView: UIScrollView, didScrollToPage page: Int) {

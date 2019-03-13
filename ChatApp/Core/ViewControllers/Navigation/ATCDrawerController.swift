@@ -27,18 +27,18 @@ class ATCDrawerController: UIViewController, ATCNavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.addChildViewController(rootViewController)
+        self.addChild(rootViewController)
         self.view.addSubview(rootViewController.view)
-        rootViewController.didMove(toParentViewController: self)
+        rootViewController.didMove(toParent: self)
 
         overlayView.backgroundColor = .black
         overlayView.alpha = 0
         view.addSubview(overlayView)
 
         self.menuController.view.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.bounds.height)
-        self.addChildViewController(menuController)
+        self.addChild(menuController)
         self.view.addSubview(menuController.view)
-        menuController.didMove(toParentViewController: self)
+        menuController.didMove(toParent: self)
 
         configureGestures()
     }
