@@ -109,6 +109,7 @@ class ATCGenericCollectionViewController: UICollectionViewController {
     }
 
     override func viewDidLoad() {
+        print("home view controller did load")
         super.viewDidLoad()
         guard let collectionView = collectionView else {
             fatalError()

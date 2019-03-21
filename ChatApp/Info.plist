@@ -59,5 +59,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) wants to access your Photos library to let you upload images.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>${PRODUCT_NAME} needs access to the camera to let you upload photos.</string>
 </dict>
 </plist>

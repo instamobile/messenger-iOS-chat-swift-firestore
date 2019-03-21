@@ -33,18 +33,22 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, M
     private let storage = Storage.storage().reference()
     
     private var isSendingPhoto = false
-    //    {
-    //        didSet {
-    //            DispatchQueue.main.async {
-    //                self.messageInputBar.leftStackViewItems.forEach { item in
-    //                    item.isEnabled = !self.isSendingPhoto
-    //                }
-    //            }
-    //        }
-    //    }
+        // This code block doesn't work, as InputItem no longer has .isEnabled property
+        // how else can this be accomplished?
+//        {
+//            didSet {
+//                DispatchQueue.main.async {
+//                    self.messageInputBar.leftStackViewItems.forEach { item in
+//                        item.isEnabled = !self.isSendingPhoto
+//
+//                    }
+//                }
+//            }
+//        }
     
     var channel: ATCChatChannel
     var uiConfig: ATCChatUIConfiguration
+    let remoteData = ATCRemoteData()
     
     init(user: ATCUser, channel: ATCChatChannel, uiConfig: ATCChatUIConfiguration) {
         self.user = user
@@ -64,8 +68,12 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, M
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("thread view controller did load")
         
         reference = db.collection(["channels", channel.id, "thread"].joined(separator: "/"))
+        print("reference.path for thread: \(reference?.path)")
+        
+        self.remoteData.checkPath(path: ["channels", channel.id, "thread"], dbRepresentation: channel.representation)
         
         messageListener = reference?.addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
@@ -106,20 +114,20 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, M
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         
-        //        let cameraItem = UIBarButtonItem(.system)
-        //        cameraItem.tintColor = uiConfig.primaryColor
-        //        cameraItem.image = UIImage.localImage("camera-filled-icon", template: true)
-        //        cameraItem.addTarget(
-        //            self,
-        //            action: #selector(cameraButtonPressed),
-        //            for: .primaryActionTriggered
-        //        )
-        //        cameraItem.setSize(CGSize(width: 30, height: 30), animated: false)
+        let cameraItem = InputBarButtonItem(type: .system)
+        cameraItem.tintColor = uiConfig.primaryColor
+        cameraItem.image = UIImage.localImage("camera-filled-icon", template: true)
+        cameraItem.addTarget(
+            self,
+            action: #selector(cameraButtonPressed),
+            for: .primaryActionTriggered
+        )
+        cameraItem.setSize(CGSize(width: 30, height: 30), animated: false)
         
         messageInputBar.leftStackView.alignment = .center
         messageInputBar.setLeftStackViewWidthConstant(to: 50, animated: false)
         messageInputBar.setRightStackViewWidthConstant(to: 35, animated: false)
-        //messageInputBar.setStackViewItems([cameraItem], forStack: .left, animated: false)
+        messageInputBar.setStackViewItems([cameraItem], forStack: .left, animated: false)
         messageInputBar.backgroundColor = .white
         messageInputBar.backgroundView.backgroundColor = .white
         messageInputBar.separatorLine.isHidden = true
@@ -141,8 +149,9 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, M
     }
     
     // MARK: - Helpers
-    
+
     private func save(_ message: ATChatMessage) {
+        print("saving message: \(message.representation)")
         reference?.addDocument(data: message.representation) { error in
             if let e = error {
                 print("Error sending message: \(e.localizedDescription)")
@@ -218,10 +227,12 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, M
     }
     
     private func sendPhoto(_ image: UIImage) {
+        print("is sending photo")
         isSendingPhoto = true
         
         uploadImage(image, to: channel) { [weak self] url in
             guard let `self` = self else {
+                print("upload image to channel with url: \(url) failed")
                 return
             }
             self.isSendingPhoto = false
@@ -361,11 +372,13 @@ extension ATCChatThreadViewController: UIImagePickerControllerDelegate, UINaviga
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
+        print("picker did finish picking photo")
         
         if let asset = info["phAsset"] as? PHAsset {
             let size = CGSize(width: 500, height: 500)
             PHImageManager.default().requestImage(for: asset, targetSize: size, contentMode: .aspectFit, options: nil) { result, info in
                 guard let image = result else {
+                    print("picker image selection had no result")
                     return
                 }
                 
@@ -377,6 +390,7 @@ extension ATCChatThreadViewController: UIImagePickerControllerDelegate, UINaviga
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("picker did cancel")
         picker.dismiss(animated: true, completion: nil)
     }
     
