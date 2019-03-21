@@ -21,6 +21,6 @@ class ATCViewControllerContainerCollectionViewCell: UICollectionViewCell {
         viewController.view.frame = containerView.bounds
         containerView.addSubview(viewController.view)
         self.setNeedsLayout()
-        viewModel.parentViewController?.addChildViewController(viewModel.viewController)
+        viewModel.parentViewController?.addChild(viewModel.viewController)
     }
 }

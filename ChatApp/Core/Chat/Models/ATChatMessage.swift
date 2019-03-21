@@ -127,7 +127,7 @@ class ATChatMessage: ATCGenericBaseModel, MessageType {
     var channelId: String {
         let id1 = (recipient.uid ?? "")
         let id2 = (atcSender.uid ?? "")
-        return id1 < id2 ? id1 + id2 : id2 + id1
+        return "\(id1):\(id2)"
     }
 }
 

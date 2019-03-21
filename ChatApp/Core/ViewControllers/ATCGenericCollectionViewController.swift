@@ -92,7 +92,7 @@ class ATCGenericCollectionViewController: UICollectionViewController {
     let configuration: ATCGenericCollectionViewControllerConfiguration
 
     fileprivate lazy var refreshControl = UIRefreshControl()
-    fileprivate lazy var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    fileprivate lazy var activityIndicator = UIActivityIndicatorView(style: .gray)
     var selectionBlock: ATCollectionViewSelectionBlock?
 
     init(configuration: ATCGenericCollectionViewControllerConfiguration, selectionBlock: ATCollectionViewSelectionBlock? = nil) {
@@ -109,6 +109,7 @@ class ATCGenericCollectionViewController: UICollectionViewController {
     }
 
     override func viewDidLoad() {
+        print("home view controller did load")
         super.viewDidLoad()
         guard let collectionView = collectionView else {
             fatalError()
@@ -158,7 +159,7 @@ class ATCGenericCollectionViewController: UICollectionViewController {
             collectionView?.register(UINib(nibName: String(describing: adapter.cellClass()), bundle: nil), forCellWithReuseIdentifier: key)
         }
         if let headerNib = configuration.headerNibName {
-            collectionView?.register(UINib(nibName: headerNib, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerNib)
+            collectionView?.register(UINib(nibName: headerNib, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerNib)
         }
     }
 
@@ -227,10 +228,10 @@ extension ATCGenericCollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if (kind == UICollectionElementKindSectionHeader) {
+        if (kind == UICollectionView.elementKindSectionHeader) {
             let id = configuration.headerNibName ?? "header"
             return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: id, for: indexPath)
-        } else if (kind == UICollectionElementKindSectionFooter) {
+        } else if (kind == UICollectionView.elementKindSectionFooter) {
             return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
         }
         fatalError()
@@ -260,7 +261,7 @@ extension ATCGenericCollectionViewController: ATCLiquidLayoutDelegate {
 
 extension ATCGenericCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -16,7 +16,7 @@ class ATCChatHomeViewController: ATCGenericCollectionViewController {
 
         super.init(configuration: configuration, selectionBlock: selectionBlock)
 
-        self.title = "Chats"
+        self.title = "TeamChat"
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +28,7 @@ class ATCChatHomeViewController: ATCGenericCollectionViewController {
                        viewer: ATCUser) -> ATCChatHomeViewController {
         let collectionVCConfiguration = ATCGenericCollectionViewControllerConfiguration(
             pullToRefreshEnabled: false,
-            pullToRefreshTintColor: .white,
+            pullToRefreshTintColor: .gray,
             collectionViewBackgroundColor: .white,
             collectionViewLayout: ATCLiquidCollectionViewLayout(),
             collectionPagingEnabled: false,
@@ -98,7 +98,8 @@ class ATCChatHomeViewController: ATCGenericCollectionViewController {
             if let user = object as? ATCUser {
                 let id1 = (user.uid ?? "")
                 let id2 = (viewer.uid ?? "")
-                let channelId = id1 < id2 ? id1 + id2 : id2 + id1
+                let channelId = "\(id1):\(id2)"
+                print("loading thread for channelID: \(channelId)")
                 let vc = ATCChatThreadViewController(user: viewer, channel: ATCChatChannel(id: channelId, name: user.fullName()), uiConfig: uiConfig)
                 navController?.pushViewController(vc, animated: true)
             }
