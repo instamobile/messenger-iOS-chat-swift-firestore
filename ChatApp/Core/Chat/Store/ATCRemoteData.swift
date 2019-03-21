@@ -41,14 +41,29 @@ class ATCRemoteData{
             } else {
                 
                 if querySnapshot?.documents != nil {
-                    print("checking for channelid: \(path[1])")
+                    print("checking for channelID: \(path[1])")
                     let channelIDRef = self.db.collection(path[0]).document(path[1])
                     channelIDRef.getDocument { (document, error) in
                         if let document = document, document.exists {
                             
                             print("chat thread exists for \(dbRepresentation)")
-                            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                            // Uncomment to see the data description
+                            //let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                         } else {
+                            print("adding indexable values to the database representation")
+                            var modifiedDBRepresentation = dbRepresentation
+                            
+                            // We will always have a thread ID with participants separated
+                            // by a ':' character, so let's work with that
+                            if let participants = (dbRepresentation["id"] as? String)?.components(separatedBy: ":"){
+                                modifiedDBRepresentation["participants"] = participants
+                                // Now, on Firestore, set your database to be indexed on "participants"
+                                // This allows you to search for all documents that have a particular participant present
+                                // say for example, retrieving only the threads to which the current logged-in user belongs
+                            }else{
+                                print("somehow we didn't have participant IDs, big issues")
+                            }
+                            
                             print("chat thread does not currently exist for \(dbRepresentation)")
                             print("creating chat thread for \(dbRepresentation)")
                             channelIDRef.setData(dbRepresentation) { err in
