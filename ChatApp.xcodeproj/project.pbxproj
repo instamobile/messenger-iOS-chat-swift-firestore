@@ -106,7 +106,6 @@
 		17E7FC202148C9E900C896C6 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7FC1F2148C9E800C896C6 /* UIScrollView.swift */; };
 		2AF1AC1E7033E8282532FB3F /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98920945FDBDABCFBD182CF5 /* Pods_ChatApp.framework */; };
 		376585B92243223D00EEB2EC /* ATCRemoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376585B82243223D00EEB2EC /* ATCRemoteData.swift */; };
-		3784F6AD2239B6E200D78EF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3784F6AC2239B6E200D78EF4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,7 +210,6 @@
 		17E7FC1D2148C9A600C896C6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		17E7FC1F2148C9E800C896C6 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		376585B82243223D00EEB2EC /* ATCRemoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCRemoteData.swift; sourceTree = "<group>"; };
-		3784F6AC2239B6E200D78EF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98920945FDBDABCFBD182CF5 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCA2BC4108D73FF4A807779 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F17EAD33D7A1CBFDE1C32E23 /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				17111D4C2128F29E008C7FBE /* LaunchScreen.storyboard */,
 				17111D4F2128F29E008C7FBE /* Info.plist */,
 				171120642128F45A008C7FBE /* ChatUIConfiguration.swift */,
-				3784F6AC2239B6E200D78EF4 /* GoogleService-Info.plist */,
 				171120662128F4EA008C7FBE /* ChatHostViewController.swift */,
 			);
 			path = ChatApp;
@@ -560,7 +557,6 @@
 				17111D3D2128F29C008C7FBE /* Frameworks */,
 				17111D3E2128F29C008C7FBE /* Resources */,
 				994045FF338E9BA81F802AF2 /* [CP] Embed Pods Frameworks */,
-				6E7ED98515D262B056EDC8EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -613,7 +609,6 @@
 				17A2B9152148C1AD0071D01F /* ATCViewControllerContainerCollectionViewCell.xib in Resources */,
 				17A2B9292148C1AD0071D01F /* ATCMessengerUserCollectionViewCell.xib in Resources */,
 				17A2B9242148C1AD0071D01F /* ATCCircledIconMenuCollectionViewCell.xib in Resources */,
-				3784F6AD2239B6E200D78EF4 /* GoogleService-Info.plist in Resources */,
 				17111D4E2128F29E008C7FBE /* LaunchScreen.storyboard in Resources */,
 				17111D4B2128F29E008C7FBE /* Assets.xcassets in Resources */,
 				17A2B93D2148C1AD0071D01F /* CoreImages.xcassets in Resources */,
@@ -629,34 +624,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6E7ED98515D262B056EDC8EE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		994045FF338E9BA81F802AF2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
@@ -678,7 +655,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
@@ -698,7 +675,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9EDF6937E14E4642BBAC31F /* [CP] Check Pods Manifest.lock */ = {
