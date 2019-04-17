@@ -47,3 +47,5 @@ let chatVC = ATCChatThreadViewController(user: viewer, channel: channel, uiConfi
 ```
 
 Coded with love and supported by <a href="https://www.iosapptemplates.com">iOS App Templates</a>.
+
+This project was created using <a href="https://www.cupertinokit.com/">Cupertino Kit</a>.
