@@ -52,7 +52,7 @@ let chatVC = ATCChatThreadViewController(user: viewer, channel: channel, uiConfi
 6. Customize the UI by updating the ChatUIConfiguration class
 
 ```swift
- let mainThemeBackgroundColor: UIColor = .white
+    let mainThemeBackgroundColor: UIColor = .white
     let mainThemeForegroundColor: UIColor = UIColor(hexString: "#3068CC")
     let mainTextColor: UIColor = UIColor(hexString: "#000000")
     let mainSubtextColor: UIColor = UIColor(hexString: "#7e7e7e")
