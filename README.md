@@ -1,4 +1,4 @@
-# Real time Swift iOS Chat with Firebase Firestore - Messenger Clone
+# Real time Swift iOS Chat with Firebase - Messenger Clone
 
 This is an extremely simple implementation of an iOS Swift Chat app. It leverages <a href="https://github.com/MessageKit/MessageKit">MessageKit</a> and it stores and retrieves data to/from Firebase Firestore. The app design is inspired by Facebook Messenger. Clone the iOS Chat App Source Code and add a fully fledged chat to your app in minutes.
 
