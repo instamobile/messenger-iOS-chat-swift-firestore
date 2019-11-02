@@ -5,11 +5,11 @@ target 'ChatApp' do
   use_frameworks!
 
   # Pods for ChatApp
-  pod 'MessageKit', '~> 2.0.0'
+  pod 'MessageKit'
 
-  pod 'FacebookCore', '~> 0.5.0'
-  pod 'FacebookLogin', '~> 0.5.0'
-  pod 'FacebookShare', '~> 0.5.0'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
