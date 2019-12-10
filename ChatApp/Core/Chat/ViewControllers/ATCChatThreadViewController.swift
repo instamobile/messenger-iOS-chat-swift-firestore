@@ -323,7 +323,7 @@ extension ATCChatThreadViewController: MessagesLayoutDelegate {
 
 // MAR: - MessageInputBarDelegate
 extension ATCChatThreadViewController {
-  func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+  func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
     let message = ATChatMessage(messageId: UUID().uuidString,
                                 messageKind: MessageKind.text(text),
                                 createdAt: Date(),
