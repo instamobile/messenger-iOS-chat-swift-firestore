@@ -64,7 +64,7 @@ class ATChatMessage: ATCGenericBaseModel, MessageType {
   
   init?(document: QueryDocumentSnapshot) {
     let data = document.data()
-    guard let sentDate = data["created"] as? Date else {
+    guard let sentDate = data["created"] as? Timestamp else {
       return nil
     }
     guard let senderID = data["senderID"] as? String else {
@@ -94,7 +94,7 @@ class ATChatMessage: ATCGenericBaseModel, MessageType {
     
     id = document.documentID
     
-    self.sentDate = sentDate
+    self.sentDate = sentDate.dateValue()
     self.atcSender = ATCUser(uid: senderID, firstName: senderFirstName, lastName: senderLastName, avatarURL: senderProfilePictureURL)
     self.recipient = ATCUser(uid: recipientID, firstName: recipientFirstName, lastName: recipientLastName, avatarURL: recipientProfilePictureURL)
     
