@@ -22,7 +22,7 @@ struct ATCChatUIConfiguration {
   let inputPlaceholderTextColor: UIColor
 }
 
-class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, MessageInputBarDelegate {
+class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, InputBarAccessoryViewDelegate {
   var user: ATCUser
   private var messages: [ATChatMessage] = []
   private var messageListener: ListenerRegistration?
