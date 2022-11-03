@@ -17,7 +17,6 @@ class ATCChatMockStore {
         ATCUser(uid: "sam", firstName: "Sam", lastName: "Smith", avatarURL: "https://cdn1.iconfinder.com/data/icons/avatar-2-2/512/Programmer-512.png", email: "testcristina@gmail.com", isOnline: false),
         ATCUser(uid: "tom", firstName: "Tom", lastName: "Bradley", avatarURL: "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/4_avatar-512.png", email: "testcristina@gmail.com", isOnline: true),
         ]
- 
     // HEY AGAIN: set the users for stcSender and atcRecipient on one of these so that one is the user
     // for your simulator, the other one is your device
     static let threads = [

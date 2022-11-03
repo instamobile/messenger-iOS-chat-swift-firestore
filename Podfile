@@ -6,7 +6,6 @@ target 'ChatApp' do
 
   # Pods for ChatApp
   pod 'MessageKit'
-
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'

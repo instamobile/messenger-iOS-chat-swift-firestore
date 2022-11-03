@@ -2,13 +2,13 @@
 
 This is an extremely simple chat app source code of an iOS Swift Chat app. It leverages <a href="https://github.com/MessageKit/MessageKit">MessageKit</a> and it stores and retrieves data to/from Firebase Firestore. The app design is inspired by Facebook Messenger. Clone the iOS Chat App Source Code and add a fully fledged chat to your app in minutes.
 
-Learn how to build your own iOS chat feature with only a few lines of code. Clone this iOS chat app source code and get started by following the steps below. For more details, check out our detailed technical documentation on the official <a href="https://www.iosapptemplates.com/templates/swift-ios-chat-firebase-realtime">iOS Swift Chat app</a> page.
+Learn how to build your own iOS chat feature with only a few lines of code. Clone this iOS chat app source code and get started by following the steps below. For more details, check out our detailed technical documentation on the official <a href="https://iosapptemplates.com/templates/swift-ios-chat-firebase-realtime">iOS Swift Chat app</a> page.
 
-<b> If you get a build error in latest Xcode, make sure you run Xcode's Legacy Build System (File -> Workspace Settings).</b> 
+<b> If you get a build error in latest Xcode, make sure you run Xcode's Legacy Build System (File -> Workspace Settings).</b>
 
-<a href="https://www.iosapptemplates.com/templates/swift-ios-chat-firebase-realtime"><img width="270px" src="https://www.iosapptemplates.com/wp-content/uploads/2018/09/swift-ios-chat-app-threads.png" /></a>
-<a href="https://www.iosapptemplates.com/templates/swift-ios-chat-firebase-realtime"><img width="270px" src="https://www.iosapptemplates.com/wp-content/uploads/2018/09/swift-ios-chat-app-room.png" /></a>
-<a href="https://www.iosapptemplates.com/templates/swift-ios-chat-firebase-realtime"><img width="270px" src="https://www.iosapptemplates.com/wp-content/uploads/2018/09/swift-ios-chat-app-room-keyboard.png" /></a>
+<a href="https://iosapptemplates.com/templates/swift-ios-chat-firebase-realtime"><img width="270px" src="https://www.iosapptemplates.com/wp-content/uploads/2018/09/swift-ios-chat-app-threads.png" /></a>
+<a href="https://iosapptemplates.com/templates/swift-ios-chat-firebase-realtime"><img width="270px" src="https://www.iosapptemplates.com/wp-content/uploads/2018/09/swift-ios-chat-app-room.png" /></a>
+<a href="https://iosapptemplates.com/templates/swift-ios-chat-firebase-realtime"><img width="270px" src="https://www.iosapptemplates.com/wp-content/uploads/2018/09/swift-ios-chat-app-room-keyboard.png" /></a>
 
 <br/>
 
@@ -17,9 +17,11 @@ Learn how to build your own iOS chat feature with only a few lines of code. Clon
 1. Download the source code by cloning this repository
 2. Download the GoogleService-Info.plist file from your <a href="https://console.firebase.google.com">Firebase Console</a> and replace the existing file in ChatApp folder. This will connect the app to your own Firebase instance.
 3. Install the pods by running
+
 ```
 pod update
 ```
+
 4. Open the xcworkspace file with the latest version of Xcode
 
 ## How to integrate the chat into your app
@@ -71,6 +73,6 @@ let chatVC = ATCChatThreadViewController(user: viewer, channel: channel, uiConfi
     let italicMediumFont = UIFont.italicSystemFont(ofSize: 17)
 ```
 
-Coded with love and supported by <a href="https://www.iosapptemplates.com">iOS App Templates</a>.
+Coded with love and supported by <a href="https://iosapptemplates.com">iOS App Templates</a>.
 
-This project was created using <a href="https://www.cupertinokit.com/">Cupertino Kit</a>.
+This project was created using <a href="https://instamobile.io/">React Native Templates</a>.

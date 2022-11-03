@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  ChatApp
 //
-//  Created by Florian Marcu on 8/18/18.
-//  Copyright © 2018 Instamobile. All rights reserved.
+//  Created by Florian Marcu on 8/18/23.
+//  Copyright © 2023 Instamobile. All rights reserved.
 //
 
 import Firebase
