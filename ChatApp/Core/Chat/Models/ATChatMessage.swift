@@ -6,7 +6,7 @@
 //  Copyright © 2018 Instamobile. All rights reserved.
 //
 
-import Firebase
+import FirebaseCore
 import FirebaseFirestore
 import MessageKit
 

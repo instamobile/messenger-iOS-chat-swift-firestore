@@ -6,7 +6,9 @@
 //  Copyright © 2017 iOS App Templates. All rights reserved.
 //
 
-import Firebase
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseDatabase
 
 let kItemsPerPage: UInt = 10
 

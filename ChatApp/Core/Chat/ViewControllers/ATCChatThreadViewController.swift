@@ -8,7 +8,7 @@
 
 import UIKit
 import Photos
-import Firebase
+import FirebaseCore
 import MessageKit
 import FirebaseFirestore
 import FirebaseStorage

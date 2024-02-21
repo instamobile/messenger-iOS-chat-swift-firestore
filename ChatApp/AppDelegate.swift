@@ -6,7 +6,7 @@
 //  Copyright © 2023 Instamobile. All rights reserved.
 //
 
-import Firebase
+import FirebaseCore
 import UIKit
 
 @UIApplicationMain

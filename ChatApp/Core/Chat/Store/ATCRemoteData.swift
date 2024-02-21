@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
+import FirebaseFirestore
 
 /// Sample class that gets all channels from the remote data store.
 class ATCRemoteData{
